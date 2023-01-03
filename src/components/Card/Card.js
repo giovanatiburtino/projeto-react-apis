@@ -4,7 +4,7 @@ import pokeball from "../../assets/pokemon-wing.svg";
 import axios from "axios";
 import { getColors } from "../../utils/ReturnCardColor";
 import { getTypes } from "../../utils/ReturnPokemonType";
-import { Button } from "@chakra-ui/react";
+import { Button, Link } from "@chakra-ui/react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { goToDetailsPage } from "../../Router/coordinator";
 
@@ -52,7 +52,7 @@ const getPokemon = async () => {
             <PokemonSecondType src={getTypes(pokemonType2)}/>
           )}
         </TypesContainer>
-        <p onClick={() => goToDetailsPage(navigate, pokemon.name)}>Detalhes</p>
+        <Link onClick={() => goToDetailsPage(navigate, pokemon.name)}>Detalhes</Link>
       </div>
       <div>
         <Pokemon src={pokemon.sprites?.other["official-artwork"].front_default}/>

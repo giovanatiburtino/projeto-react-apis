@@ -8,6 +8,8 @@ import { GlobalContext } from './context/GlobalContext';
 function App() {
   const [pokelist, setPokelist] = useState([])
   const [pokedex, setPokedex] = useState([])
+  const [gotcha, setGotcha] = useState(false)
+  const [ohNo, setOhNo] = useState(false)
 
   useEffect(() => {
     getPokelist()
@@ -31,6 +33,7 @@ function App() {
     if (!onPokedex) {
       const newPokedex = [...pokedex, pokemon];
       setPokedex(newPokedex);
+      setGotcha(true)
     }
   };
 
@@ -40,7 +43,8 @@ function App() {
     );
 
     setPokedex(newPokedex);
-  };
+    setOhNo(true)
+  }; 
 
   const context = {
     pokedex, 
@@ -48,7 +52,11 @@ function App() {
     pokelist,
     setPokelist,
     addToPokedex,
-    removeFromPokedex
+    removeFromPokedex,
+    gotcha,
+    setGotcha,
+    ohNo,
+    setOhNo
   }
 
   return (

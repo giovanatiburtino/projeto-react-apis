@@ -1,6 +1,7 @@
 import { Heading } from '@chakra-ui/react';
 import React, { useContext } from 'react'
 import Card from '../../components/Card/Card';
+import Gotcha from '../../components/Gotcha/Gotcha';
 import Header from '../../components/Header/Header'
 import { GlobalContext } from '../../context/GlobalContext';
 import { CardsContainer, Main } from '../HomePage/styled'
@@ -8,7 +9,7 @@ import { CardsContainer, Main } from '../HomePage/styled'
 const HomePage = () => {
   const context = useContext(GlobalContext)
 
-  const { pokedex, pokelist, addToPokedex  } = context
+  const { pokedex, pokelist, addToPokedex, gotcha, setGotcha } = context
 
   const filteredPokelist = () =>
     pokelist.filter((pokemonInList) => !pokedex.find((pokemonInPokedex) => pokemonInList.name === pokemonInPokedex.name)
@@ -30,6 +31,7 @@ const HomePage = () => {
               );
             })}
           </CardsContainer>
+          {gotcha ? <Gotcha setGotcha={setGotcha}/> : null}
         </Main>
     </>
   )

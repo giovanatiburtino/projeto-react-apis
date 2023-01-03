@@ -28,6 +28,13 @@ export const PokemonContainer = styled.div`
     font-size: 16px;
     line-height: 24px;
   }
+
+  a{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: underline;
+  }
 `;
 
 export const PokemonId = styled.p`
@@ -68,6 +75,7 @@ export const TypesContainer = styled.div`
   display: flex;
   margin-bottom: 52px;
 `;
+
 export const Pokeball = styled.img`
   position: absolute;
   top: -62px;

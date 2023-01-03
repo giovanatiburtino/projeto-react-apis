@@ -1,5 +1,37 @@
 import styled from "styled-components";
 
+export const Main = styled.main`
+    background-color: gray;
+    min-height: 130vh;
+    max-height: 100%;
+    width: 1600px;
+
+    .pokestats{
+        display: flex;
+    }
+
+    ul{
+        margin-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        font-weight: 500;
+    }
+
+    .name-stat{
+        text-align: center;
+        color: gray;
+    }
+
+    .progress-bar{
+        display: flex;
+        flex-direction: column;
+        margin-top: 7px;
+        gap: 12px;
+    }
+`
+
 export const CardContainer = styled.div`
     width: 95vw;
     margin: 0px 30px;
@@ -7,6 +39,7 @@ export const CardContainer = styled.div`
     background-color: ${(props) => props.color};
     border-radius: 37.8857px;
     display: flex;
+    z-index: 15;
 
     .pokemon-details{
         display: flex;
@@ -27,6 +60,7 @@ export const PokemonSprites = styled.div`
     flex-direction: column; 
     gap: 40px;
     padding: 30px 45px;
+    z-index: 4;
 `
 
 export const PokemonFront = styled.div`
@@ -37,6 +71,7 @@ export const PokemonFront = styled.div`
     border-radius: 8px;
     display: flex;
     justify-content: center;
+    z-index: 4;
 `
 
 export const PokemonBack = styled.div`
@@ -47,6 +82,7 @@ export const PokemonBack = styled.div`
     border-radius: 8px;
     display: flex;
     justify-content: center;
+    z-index: 4;
 `
 
 export const PokemonStats = styled.div`
@@ -55,6 +91,7 @@ export const PokemonStats = styled.div`
     background-color: #FFFFFF;
     border-radius: 12px;
     margin-top: 30px;
+    z-index: 4;
 `
 
 export const PokemonType = styled.img`
@@ -73,7 +110,9 @@ export const PokemonMoves = styled.div`
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    gap: 10px;
+    z-index: 3;
+    padding: 10px;
 `
 
 export const Pokemon = styled.img`
@@ -82,12 +121,36 @@ export const Pokemon = styled.img`
   position: absolute;
   left: 1180px;
   top: 190px;
+  z-index: 3;
 `;
 
 export const Pokeball = styled.img`
   position: absolute;
   left: 650px;
-  top: 210px;
-  width: 865px;
-  z-index: 1;
+  top: 200px;
+  width: 900px;
+  z-index: 2;
 `;
+
+export const Move = styled.div`
+    min-width: 102px;
+    max-width: 120px;
+    height: 37px;
+    border-radius: 12px;
+    background: #ECECEC;
+    border: 1px dashed rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+`;
+
+export const PokeballBackground = styled.img`
+    position: absolute;
+    top: 0;
+    margin-left: 250px;
+    margin-right: 250px;
+    width: 1000px;
+    z-index: 1;
+`
