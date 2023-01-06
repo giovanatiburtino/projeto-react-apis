@@ -16,7 +16,7 @@ function Header(props) {
 
     const { pokeDetails } = props
 
-    const { removeFromPokedex } = context
+    const { anotherRemoveFromPokedex } = context
 
     const pathParams = useParams()
 
@@ -43,7 +43,7 @@ function Header(props) {
                     <HeaderDetails>
                         <Link onClick={() => goToHomePage(navigate)}> &lt; Todos Pokémons</Link>
                         <img src={Logo} alt="Pokemon Logo" />
-                        <Button w="226px" h="57px" bg='red.400' borderRadius='8px' onClick={() => removeFromPokedex(pokeDetails)}>
+                        <Button w="226px" h="57px" bg='red.400' borderRadius='8px' onClick={() => anotherRemoveFromPokedex(pokeDetails)}>
                             Excluir do Pokédex
                         </Button>
                     </HeaderDetails>

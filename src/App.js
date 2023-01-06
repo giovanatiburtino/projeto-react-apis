@@ -5,11 +5,13 @@ import axios from "axios"
 import { BASE_URL } from './constants/url';
 import { GlobalContext } from './context/GlobalContext';
 
+
 function App() {
   const [pokelist, setPokelist] = useState([])
   const [pokedex, setPokedex] = useState([])
   const [gotcha, setGotcha] = useState(false)
   const [ohNo, setOhNo] = useState(false)
+  const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
     getPokelist()
@@ -46,6 +48,22 @@ function App() {
     setOhNo(true)
   }; 
 
+  const anotherRemoveFromPokedex = (pokemon) => {
+    const onPokedex = pokedex.find(
+      (pokemonInPokedex) => pokemonInPokedex.name === pokemon.name
+    );
+
+    if(onPokedex){
+      const pokemonToRemove = pokedex.filter(
+        (pokemonInPokedex) => pokemonInPokedex.name !== pokemon.name
+      );
+      setPokedex(pokemonToRemove)
+      setOhNo(true)
+    } else {
+      setNotFound(true)
+    }
+  }
+
 
   const context = {
     pokedex, 
@@ -57,7 +75,10 @@ function App() {
     gotcha,
     setGotcha,
     ohNo,
-    setOhNo
+    setOhNo,
+    anotherRemoveFromPokedex,
+    notFound,
+    setNotFound
   }
 
   return (

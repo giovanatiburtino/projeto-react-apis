@@ -15,7 +15,7 @@ export const HeaderContainer = styled.header`
     button{
         position: absolute;
         right: 0;
-        margin: 4px 10px;
+        margin: 4px 20px;
         color: white;
         font-style: normal;
         font-weight: 700;

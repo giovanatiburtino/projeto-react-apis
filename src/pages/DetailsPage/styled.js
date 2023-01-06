@@ -150,7 +150,7 @@ export const Move = styled.div`
 export const PokeballBackground = styled.img`
     position: absolute;
     top: 25px;
-    margin-left: 250px;
+    margin-left: 300px;
     margin-right: 250px;
     width: 1000px;
     z-index: 1;

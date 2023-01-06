@@ -1,68 +1,60 @@
-# **Projeto React e API's**
-O Projeto React e APIs é um site de pokémons que possui três páginas: Home, Pokedex e Detalhes. O projeto está subdivido em temas de acordo com os conteúdos que estudado durante o Módulo 2 - Frontend.
+# Projeto Pokedéx
 
-Este projeto terá como fonte de dados para a sua criação a [Poke Api](https://pokeapi.co/ "Poke Api"), uma Api pública, muito usada para aplicações focadas em aprendizado de programação e também usada em cases de processos seletivos.
+![Pokedex](./src/assets/screen-pokedex.png)
 
-Os conteúdos principais  a serem estudados são:
+## Índice
 
-- Integração de APIs
-- React Router
-- Design Systems
-- Estado Global
+- <a href="#funcionalidades">Funcionalidades do Projeto</a>
+- <a href="#demonstração">Demonstração</a>
+- <a href="#tecnologias">Tecnologias utilizadas</a>
+- <a href="#funcionalidades">Como rodar este projeto?</a>
+- <a href="#funcionalidades">Autores</a>
 
-## **Enunciado**
-É objetivo deste projeto criar um site com três páginas usando a Poke Api com as seguintes ferramentas:
+## 📱 Funcionalidades do Projeto
 
-- React
-- React Router
-- Styled-components
-- React Context
-- Axios
+- [x] Mostra uma lista de Pokemons, contendo 50 pokemons.
+- [x] Cada Pokemon é representado por um card personalizado, conforme seu tipo.
+- [x] Botão de capturar o pokémon para adicioná-lo à Pokedex
+- [x] Botão de excluir o pokémon da Pokedex
+- [x] Botão para acessar os detalhes do pokémon
+- [x] Botão de excluir o pokémon da Pokédex através da página de Detalhes (se o pokémon selecionado estiver sido capturado)
+- [x] Botão nas páginas Pokédex e Detalhes que volta para a página Inicial (Home)
 
-### **Requisitos**
-- **Gerais:**
-	- [ ] O site deve ter 3 páginas: Home, Pokedex e Detalhes;
-	- [ ] Projeto deve seguir o [design](https://www.figma.com/file/KseyA2Ofghiek2Cy3ZaDre/Poked%C3%A9x?t=AEi3zEmWmarf1FbP-0 "design") proposto;
-	- [ ] O fluxo de trocas de páginas devem ser semelhante ao [fluxograma](https://www.figma.com/proto/KseyA2Ofghiek2Cy3ZaDre/Poked%C3%A9x?page-id=0%3A1&node-id=2%3A2&viewport=358%2C197%2C0.27&scaling=scale-down&starting-point-node-id=2%3A2 "fluxograma");
-- **Página Home:**
-	- [ ]  Mostrar uma lista de Pokemons, contendo ao menos 20 Pokemons;
-	- [ ] Cada Pokemon será representado por um Card;
-	- [ ] Em cada card de Pokemon tem um botão para adicioná-lo à Pokedex e um outro botão para acessar os detalhes do Pokemon;
-	- [ ] Header dessa página terá um botão para acessar a página da Pokedex
-- **Página Pokédex**
-	- [ ] Renderizar a lista de pokémons adicionados na pokedex;
-	- [ ] Em cada card de Pokemon deve ter um botão para removê-lo da Pokedex e um outro botão para acessar os detalhes do Pokemon.
-	- [ ] Header deve ter um botão para voltar para a Home
-	- [ ] Não deve ser possível adicionar o mesmo Pokemon duas vezes na Pokedex
-- **Página de Detalhes**
-	- [ ] Mostrar os detalhes do Pokemon selecionado, com informações descritas
-	- [ ] Header deve ter um botão para adicionar ou remover da Pokedex e outro para voltar a página home.
-- [ ] [Criar um readme](https://www.youtube.com/watch?v=1QKwP0SJK-c "Crie um readme") para o projeto;
+## 💻 Demonstração
 
+## Como rodar este projeto?
 
-### Instruções de entrega
+```bash
+# Clone este repositório
+$ git clone linkrepo
 
-- Faça o fork desse repositório e realize o clone da sua cópia `seu-nome-de-usuario/projeto-intro-web`.
-   <details>
-   <summary>Quer uma dica?</summary>
-   <img src="https://firebasestorage.googleapis.com/v0/b/assets-conteudo.appspot.com/o/gerais%2Ffork.png?alt=media&token=7030e997-246a-41fe-a75f-2a2ced61e54d" alt="Como adicionar o projeto no repositório"/>
-   </details>
-- Crie os arquivos do projeto dentro deste repo;
-- Execute o fluxo de entrega do git. **Lembre-se de abrir os PRs para seu próprio repositório.**
-- Para isso, você precisará fazer o projeto utilizando **branches**. Evite fazer as alterações direto na branch ```main```
-    <details>
-       <summary>Dúvidas sobre o Git & Github?</summary>
-       <p>Adiciomos um vídeo explicando o <strong>processo de entrega</strong> [do fork ao pull request] no Material Assincrono da <a href="https://classroom.google.com/w/NTM0NjA2NDg3MjIx/tc/NTM2NDg5NTQyODg4">A005 - Git e Github</a>. Esse vídeo também exemplifica situações que podem acontecer durante o fluxo de utilização do Git.</p>
-    </details>
-- Faça o deploy do projeto. Pode ser ultilizado o surge, Github pages ou outra ferramenta que faça a disponibilização do seu site para acesso público;
-				
-	dica para usar o surge:
-	* Instalar surge (só 1a vez): `npm install -g surge`
-	* Buildar app React: `npm run build`
-	* Corrigir a nomeação do arquivo (por causa do router)
-		 `cp ./build/index.html ./build/200.html`
-	* Deployar com surge: `surge ./build`
-- Adicionar o link do deploy no readme do seu projeto/repositório:
+# Acesse a pasta do projeto no seu terminal
+$ cd projeto-pokedex
 
+# Instale as depedências
+$ npm install
 
-- Entregue o projeto no [Formulário de entrega](https://docs.google.com/forms/d/e/1FAIpQLSfGGRaglpzWpdREBBfq3eUCMXkRXuiS61Zfyy0L_Ce0uNIXTA/viewform).
+# Execute a aplicação
+$ npm run start
+
+# A aplicação será iniciada na porta 3000, acesse pelo navegador: http://localhost:3000
+
+```
+
+## ⚒️ Tecnologias Utilizadas
+
+1.[React](https://pt-br.reactjs.org/)
+
+2.[React Router](https://reactrouter.com/)
+
+3.[React Context](https://reactjs.org/docs/context.html)
+
+4.[Axios](https://axios-http.com/ptbr/docs/intro)
+
+5.[Styled Components](https://styled-components.com/)
+
+6.[Chakra Ui](https://chakra-ui.com/)
+
+## Autores
+
+[Linkedin](https://www.linkedin.com/ingiovana-ferreira-tiburtino-475486216/)
