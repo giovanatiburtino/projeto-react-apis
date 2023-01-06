@@ -4,11 +4,11 @@
 
 ## Índice
 
-- <a href="#funcionalidades">Funcionalidades do Projeto</a>
-- <a href="#demonstração">Demonstração</a>
-- <a href="#tecnologias">Tecnologias utilizadas</a>
-- <a href="#funcionalidades">Como rodar este projeto?</a>
-- <a href="#funcionalidades">Autores</a>
+- <a href="#-funcionalidades-do-projeto">Funcionalidades do Projeto</a>
+- <a href="#-demonstração">Demonstração</a>
+- <a href="#-tecnologias-utilizadas">Tecnologias utilizadas</a>
+- <a href="#-funcionalidades-do-projeto">Como rodar este projeto?</a>
+- <a href="#-funcionalidades">Autores</a>
 
 ## 📱 Funcionalidades do Projeto
 
