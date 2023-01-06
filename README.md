@@ -4,13 +4,13 @@
 
 ## Índice
 
-- <a href="#-funcionalidades-do-projeto">Funcionalidades do Projeto</a>
-- <a href="#-demonstração">Demonstração</a>
-- <a href="#-tecnologias-utilizadas">Tecnologias utilizadas</a>
-- <a href="#-funcionalidades-do-projeto">Como rodar este projeto?</a>
-- <a href="#-funcionalidades">Autores</a>
+- <a href="#funcionalidades-do-projeto">Funcionalidades do Projeto</a>
+- <a href="#demonstração">Demonstração</a>
+- <a href="#como-rodar-este-projeto">Como rodar este projeto?</a>
+- <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a>
+- <a href="#autores">Autores</a>
 
-## 📱 Funcionalidades do Projeto
+## Funcionalidades do Projeto
 
 - [x] Mostra uma lista de Pokemons, contendo 50 pokemons.
 - [x] Cada Pokemon é representado por um card personalizado, conforme seu tipo.
@@ -20,7 +20,7 @@
 - [x] Botão de excluir o pokémon da Pokédex através da página de Detalhes (se o pokémon selecionado estiver sido capturado)
 - [x] Botão nas páginas Pokédex e Detalhes que volta para a página Inicial (Home)
 
-## 💻 Demonstração
+## Demonstração
 
 ## Como rodar este projeto?
 
@@ -41,7 +41,7 @@ $ npm run start
 
 ```
 
-## ⚒️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 1.[React](https://pt-br.reactjs.org/)
 
