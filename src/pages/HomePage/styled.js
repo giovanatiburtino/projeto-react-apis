@@ -6,5 +6,7 @@ export const CardsContainer = styled.div`
     justify-items: center;
 `
 export const Main = styled.main`
-    background: gray;
+    background-color: gray;
+    min-width: 1500px;
+    max-width: 1700px;
 `

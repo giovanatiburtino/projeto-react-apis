@@ -38,6 +38,7 @@ export const HeaderPokedex = styled.header`
         font-size: 24px;
         line-height: 36px;
         text-decoration-line: underline;
+        display: flex;
     }
 
     img{
@@ -60,6 +61,7 @@ export const HeaderDetails = styled.header`
         font-size: 24px;
         line-height: 36px;
         text-decoration-line: underline;
+        display: flex;
     }
 
     button{

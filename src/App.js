@@ -17,7 +17,7 @@ function App() {
 
   const getPokelist = async () => {
     try{
-      const response = await axios.get(BASE_URL);
+      const response = await axios.get(`${BASE_URL}/?limit=50`);
       setPokelist(response.data.results)
     } catch(error) {
       console.log("Erro ao buscar lista de pokemons")
@@ -38,13 +38,14 @@ function App() {
   };
 
   const removeFromPokedex = (pokemon) => {
-    const newPokedex = pokedex.filter(
+    const pokemonToRemove = pokedex.filter(
       (pokemonInPokedex) => pokemonInPokedex.name !== pokemon.name
     );
 
-    setPokedex(newPokedex);
+    setPokedex(pokemonToRemove);
     setOhNo(true)
   }; 
+
 
   const context = {
     pokedex, 

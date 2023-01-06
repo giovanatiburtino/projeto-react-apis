@@ -1,16 +1,24 @@
 import { Heading, Progress } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../../components/Header/Header';
 import { CardContainer, Main, Move, Pokeball, PokeballBackground, Pokemon, PokemonBack, PokemonFront, PokemonMoves, PokemonSprites, PokemonStats, PokemonType } from './styled';
 import { BASE_URL } from '../../constants/url';
-import { getTypes } from '../../utils/ReturnPokemonType';
-import { getColors } from '../../utils/ReturnCardColor';
+import { getTypes } from '../../utils/PokemonType';
+import { getColors } from '../../utils/CardColor';
 import pokeball from '../../assets/pokemon-wing.svg'
+import { GlobalContext } from '../../context/GlobalContext';
+import OhNo from '../../components/OhNo/OhNo';
+import { getProgressColor } from '../../utils/ProgressBarColor';
+
 
 const DetailsPage = () => {
   const pathParams = useParams()
+
+  const context = useContext(GlobalContext)
+
+  const { ohNo, setOhNo } = context
 
   const [pokeDetails, setPokeDetails] = useState({})
 
@@ -32,7 +40,7 @@ const DetailsPage = () => {
 
   const getPokeDetails = async () => {
     try{
-      const response = await axios.get(`${BASE_URL}/${pathParams.pokemonName}`);
+      const response = await axios.get(`${BASE_URL}/${pathParams.pokemonName}/`);
       setPokeDetails(response.data)
       setHp(response.data.stats[0].base_stat);
       setAttack(response.data.stats[1].base_stat);
@@ -51,12 +59,11 @@ const DetailsPage = () => {
       console.log(error.response)
     }
   }
-    
-  console.log(moves)
+  
 
   return (
     <>
-      <Header/>
+      <Header pokeDetails={pokeDetails}/>
       <Main>
       <PokeballBackground src={pokeball} alt="pokeball"/>
       <Heading p="50px 30px" fontSize='48px' color="white">Detalhes</Heading>
@@ -87,12 +94,12 @@ const DetailsPage = () => {
               <li>{hp + speed + defense + spAtk + spDef + speed}</li>
             </ul>
             <ul className='progress-bar'>
-              <li><Progress colorScheme={"orange"} value={hp} size="md" width={"180px"} borderRadius="4px"/></li>
-              <li><Progress colorScheme={"orange"} value={attack} size="md" width={"180px"} borderRadius="4px"/></li>
-              <li><Progress colorScheme={"orange"} value={defense} size="md" width={"180px"} borderRadius="4px"/></li>
-              <li><Progress colorScheme={"yellow"} value={spAtk} size="md" width={"180px"} borderRadius="4px"/></li>
-              <li><Progress colorScheme={"yellow"} value={spDef} size="md" width={"180px"} borderRadius="4px"/></li>
-              <li><Progress colorScheme={"orange"} value={speed} size="md" width={"180px"} borderRadius="4px"/></li>
+              <li><Progress colorScheme={getProgressColor(pokemonType1)} value={hp} size="md" width={"180px"} borderRadius="4px"/></li>
+              <li><Progress colorScheme={getProgressColor(pokemonType1)} value={attack} size="md" width={"180px"} borderRadius="4px"/></li>
+              <li><Progress colorScheme={getProgressColor(pokemonType1)} value={defense} size="md" width={"180px"} borderRadius="4px"/></li>
+              <li><Progress colorScheme={getProgressColor(pokemonType2)} value={spAtk} size="md" width={"180px"} borderRadius="4px"/></li>
+              <li><Progress colorScheme={getProgressColor(pokemonType2)} value={spDef} size="md" width={"180px"} borderRadius="4px"/></li>
+              <li><Progress colorScheme={getProgressColor(pokemonType1)} value={speed} size="md" width={"180px"} borderRadius="4px"/></li>
             </ul>
           </div>
         </PokemonStats>
@@ -101,7 +108,9 @@ const DetailsPage = () => {
           <Heading fontSize='48px' color="white">{pokeDetails.name}</Heading>
           <div className='types-group'>
             <PokemonType src={getTypes(pokemonType1)}/>
+            {!pokemonType2.length < 1 && (
             <PokemonType src={getTypes(pokemonType2)}/>
+            )}
           </div>
           <PokemonMoves>
             <Heading color="black" fontSize='25px'>Moves:</Heading>
@@ -119,6 +128,7 @@ const DetailsPage = () => {
         </div>
         <Pokeball src={pokeball} alt="pokeball"/>
       </CardContainer>
+      {ohNo ? <OhNo setOhNo={setOhNo}/> : null}
       </Main>
     </>
   )

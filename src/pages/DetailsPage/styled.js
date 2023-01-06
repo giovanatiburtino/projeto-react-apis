@@ -39,6 +39,7 @@ export const CardContainer = styled.div`
     background-color: ${(props) => props.color};
     border-radius: 37.8857px;
     display: flex;
+    position: absolute;
     z-index: 15;
 
     .pokemon-details{
@@ -127,7 +128,7 @@ export const Pokemon = styled.img`
 export const Pokeball = styled.img`
   position: absolute;
   left: 650px;
-  top: 200px;
+  top: -120px;
   width: 900px;
   z-index: 2;
 `;
@@ -148,7 +149,7 @@ export const Move = styled.div`
 
 export const PokeballBackground = styled.img`
     position: absolute;
-    top: 0;
+    top: 25px;
     margin-left: 250px;
     margin-right: 250px;
     width: 1000px;
