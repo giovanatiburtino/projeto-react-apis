@@ -7,6 +7,6 @@ export const CardsContainer = styled.div`
 `
 export const Main = styled.main`
     background-color: gray;
-    min-width: 1500px;
-    max-width: 1700px;
+    min-width: 1520px;
+    max-width: 1800px;
 `

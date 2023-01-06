@@ -21,6 +21,6 @@ export const OhNoContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 15;
   background-color: rgb(0, 0, 0, 0.5);
 `;

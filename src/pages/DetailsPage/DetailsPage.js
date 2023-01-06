@@ -11,6 +11,7 @@ import pokeball from '../../assets/pokemon-wing.svg'
 import { GlobalContext } from '../../context/GlobalContext';
 import OhNo from '../../components/OhNo/OhNo';
 import { getProgressColor } from '../../utils/ProgressBarColor';
+import NotFound from '../../components/NotFound/NotFound';
 
 
 const DetailsPage = () => {
@@ -18,7 +19,7 @@ const DetailsPage = () => {
 
   const context = useContext(GlobalContext)
 
-  const { ohNo, setOhNo } = context
+  const { ohNo, setOhNo, notFound, setNotFound } = context
 
   const [pokeDetails, setPokeDetails] = useState({})
 
@@ -129,6 +130,7 @@ const DetailsPage = () => {
         <Pokeball src={pokeball} alt="pokeball"/>
       </CardContainer>
       {ohNo ? <OhNo setOhNo={setOhNo}/> : null}
+      {notFound ? <NotFound setNotFound={setNotFound}/> : null}
       </Main>
     </>
   )
