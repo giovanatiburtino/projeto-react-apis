@@ -2,6 +2,10 @@
 
 ![Pokedex](./src/assets/screen-pokedex.png)
 
+O Projeto React e APIs é um site de pokémons que possui três páginas: Home, Pokedex e Detalhes. 
+
+Este projeto terá como fonte de dados para a sua criação a Poke Api, uma Api pública, muito usada para aplicações focadas em aprendizado de programação e também usada em cases de processos seletivos.
+
 ## Índice
 
 - <a href="#funcionalidades-do-projeto">Funcionalidades do Projeto</a>
