@@ -8,11 +8,11 @@ Este projeto terá como fonte de dados para a sua criação a Poke Api, uma Api 
 
 ## Índice
 
-- <a href="#funcionalidades-do-projeto">Funcionalidades do Projeto</a>
-- <a href="#demonstração">Demonstração</a>
-- <a href="#como-rodar-este-projeto">Como rodar este projeto?</a>
-- <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a>
-- <a href="#autores">Autores</a>
+- <a href="#-funcionalidades-do-projeto">Funcionalidades do Projeto</a>
+- <a href="#-demonstração">Demonstração</a>
+- <a href="#-como-rodar-este-projeto">Como rodar este projeto?</a>
+- <a href="#-tecnologias-utilizadas">Tecnologias utilizadas</a>
+- <a href="#-autores">Autores</a>
 
 ## 💻 Funcionalidades do Projeto
 
