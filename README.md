@@ -10,7 +10,7 @@
 - <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a>
 - <a href="#autores">Autores</a>
 
-## Funcionalidades do Projeto
+## 💻 Funcionalidades do Projeto
 
 - [x] Mostra uma lista de Pokemons, contendo 50 pokemons.
 - [x] Cada Pokemon é representado por um card personalizado, conforme seu tipo.
@@ -20,10 +20,10 @@
 - [x] Botão de excluir o pokémon da Pokédex através da página de Detalhes (se o pokémon selecionado estiver sido capturado)
 - [x] Botão nas páginas Pokédex e Detalhes que volta para a página Inicial (Home)
 
-## Demonstração
+## 📺 Demonstração
 [Link demonstração](https://pokedex-api-giodev.surge.sh/)
 
-## Como rodar este projeto?
+## 💿 Como rodar este projeto?
 
 ```bash
 # Clone este repositório
@@ -42,7 +42,7 @@ $ npm run start
 
 ```
 
-## Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
 1.[React](https://pt-br.reactjs.org/)
 
@@ -56,6 +56,6 @@ $ npm run start
 
 6.[Chakra Ui](https://chakra-ui.com/)
 
-## Autores
+## 👩‍💻 Autores
 
 [Linkedin](https://www.linkedin.com/ingiovana-ferreira-tiburtino-475486216/)
