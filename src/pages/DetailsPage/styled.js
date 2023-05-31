@@ -1,10 +1,15 @@
+import { Heading } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const Main = styled.main`
     background-color: gray;
     min-height: 130vh;
-    max-height: 100%;
-    width: 1600px;
+    max-height: 150vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .pokestats{
         display: flex;
@@ -32,9 +37,16 @@ export const Main = styled.main`
     }
 `
 
+export const HeadingTag = styled(Heading)`
+    font-size: 48px;
+    color: white;
+    top: 12.5rem;
+    position: absolute;
+    left: 2.5rem;
+`
+
 export const CardContainer = styled.div`
     width: 95vw;
-    margin: 0px 30px;
     height: 663px;
     background-color: ${(props) => props.color};
     border-radius: 37.8857px;
@@ -120,17 +132,18 @@ export const Pokemon = styled.img`
   width: 270px;
   height: 270px;
   position: absolute;
-  left: 1180px;
-  top: 190px;
+  right: 2rem;
+  top: -8rem;
   z-index: 3;
 `;
 
 export const Pokeball = styled.img`
   position: absolute;
-  left: 650px;
+  right: -1rem;
   top: -120px;
   width: 900px;
   z-index: 2;
+  overflow: hidden;
 `;
 
 export const Move = styled.div`
@@ -150,8 +163,6 @@ export const Move = styled.div`
 export const PokeballBackground = styled.img`
     position: absolute;
     top: 25px;
-    margin-left: 300px;
-    margin-right: 250px;
     width: 1000px;
     z-index: 1;
 `

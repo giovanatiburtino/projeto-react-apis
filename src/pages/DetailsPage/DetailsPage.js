@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../../components/Header/Header';
-import { CardContainer, Main, Move, Pokeball, PokeballBackground, Pokemon, PokemonBack, PokemonFront, PokemonMoves, PokemonSprites, PokemonStats, PokemonType } from './styled';
+import { CardContainer, HeadingTag, Main, Move, Pokeball, PokeballBackground, Pokemon, PokemonBack, PokemonFront, PokemonMoves, PokemonSprites, PokemonStats, PokemonType } from './styled';
 import { BASE_URL } from '../../constants/url';
 import { getTypes } from '../../utils/PokemonType';
 import { getColors } from '../../utils/CardColor';
@@ -66,8 +66,8 @@ const DetailsPage = () => {
     <>
       <Header pokeDetails={pokeDetails}/>
       <Main>
-      <PokeballBackground src={pokeball} alt="pokeball"/>
-      <Heading p="50px 30px" fontSize='48px' color="white">Detalhes</Heading>
+      <HeadingTag>Detalhes</HeadingTag>
+      <PokeballBackground src={pokeball} alt="pokeball"/>  
       <CardContainer color={getColors(pokemonType1)}>
         <PokemonSprites>
           <PokemonFront><img src={pokeDetails.sprites?.front_default} alt={pokeDetails.name}/></PokemonFront>
